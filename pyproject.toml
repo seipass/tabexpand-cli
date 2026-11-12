@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "tabexpand-cli"
+version = "0.1.0"
+description = "Expand tabs in text input."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+[project.scripts]
+tabexpand-cli = "tabexpand_cli.cli:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
